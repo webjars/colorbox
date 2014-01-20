@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jquery-colorbox</artifactId>
-    <version>1.4.33</version>
+    <version>1.4.33-SNAPSHOT</version>
     <name>jquery-Colorbox</name>
     <description>WebJar for jquery-Colorbox</description>
     <url>http://webjars.org</url>
@@ -85,6 +85,16 @@
 										<exclude name="${upstream.directory}/src/**" />
 										<exclude name="${upstream.directory}/troubleshoot/**" />
                                         <exclude name="${upstream.directory}/index.html" />
+                                        <exclude name="${upstream.directory}/README.md" />
+                                        <exclude name="${upstream.directory}/example1/" />
+                                        <exclude name="${upstream.directory}/example2/" />
+                                        <exclude name="${upstream.directory}/example3/" />
+                                        <exclude name="${upstream.directory}/example4/" />
+                                        <exclude name="${upstream.directory}/example5/" />
+                                        <exclude name="${upstream.directory}/bower.json" />
+                                        <exclude name="${upstream.directory}/colorbox.ai" />
+                                        <exclude name="${upstream.directory}/content/" />
+                                        <exclude name="${upstream.directory}/colorbox.jquery.json" />
                                     </patternset>
                                     <mapper>
                                         <!-- Strip leading directory off each path -->
@@ -101,9 +111,34 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>2.4.2</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>1.9</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.5.1</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>sonatype-nexus-staging</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <targetPath>${destDir}</targetPath>
+            </resource>
+        </resources>
     </build>
 
 </project>
