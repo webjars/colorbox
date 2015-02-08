@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jquery-colorbox</artifactId>
-    <version>1.5.14</version>
+    <version>1.5.15-SNAPSHOT</version>
     <name>jquery-Colorbox</name>
     <description>WebJar for jquery-Colorbox</description>
     <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
         <url>http://github.com/webjars/jquery-colorbox</url>
         <connection>scm:git:https://github.com/webjars/jquery-colorbox.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/jquery-colorbox.git</developerConnection>
-        <tag>jquery-colorbox-1.5.14</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
