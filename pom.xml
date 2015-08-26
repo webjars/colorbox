@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jquery-colorbox</artifactId>
-    <version>1.5.15-SNAPSHOT</version>
+    <version>1.6.3-SNAPSHOT</version>
     <name>jquery-Colorbox</name>
     <description>WebJar for jquery-Colorbox</description>
     <url>http://webjars.org</url>
@@ -41,7 +41,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>1.5.14</upstream.version>
+        <upstream.version>1.6.3</upstream.version>
         <upstream.directory>colorbox-${upstream.version}</upstream.directory>
         <upstream.file>${upstream.version}.zip</upstream.file>
         <upstream.url>https://github.com/jackmoore/colorbox/archive/</upstream.url>
