@@ -41,7 +41,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>1.6.3</upstream.version>
+        <upstream.version>1.6.4</upstream.version>
         <upstream.directory>colorbox-${upstream.version}</upstream.directory>
         <upstream.file>${upstream.version}.zip</upstream.file>
         <upstream.url>https://github.com/jackmoore/colorbox/archive/</upstream.url>
